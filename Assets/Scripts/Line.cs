@@ -39,7 +39,7 @@ public class Line : MonoBehaviour
             var pointsInNeck = Mathf.Min(pointsInNeckTarget, _points.Count);
             neckCollider.SetPoints(_points.GetRange(_points.Count - pointsInNeck, pointsInNeck));
             tailCollider.SetPoints(_points.GetRange(0, _points.Count - pointsInNeck));
-            await Awaitable.WaitForSecondsAsync(.1f);
+            await Awaitable.WaitForSecondsAsync(.4f);
         }
     }
     
