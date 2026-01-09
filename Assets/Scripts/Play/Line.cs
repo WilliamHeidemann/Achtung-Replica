@@ -10,6 +10,8 @@ public class Line : MonoBehaviour
     [SerializeField] private EdgeCollider2D neckCollider;
     [SerializeField] private EdgeCollider2D tailCollider;
     [SerializeField] private int pointsInNeckTarget = 5;
+    [SerializeField] private float pointSampleRate = 0.5f;
+    
     
     private List<Vector2> _points;
 
@@ -39,7 +41,7 @@ public class Line : MonoBehaviour
             var pointsInNeck = Mathf.Min(pointsInNeckTarget, _points.Count);
             neckCollider.SetPoints(_points.GetRange(_points.Count - pointsInNeck, pointsInNeck));
             tailCollider.SetPoints(_points.GetRange(0, _points.Count - pointsInNeck));
-            await Awaitable.WaitForSecondsAsync(.4f);
+            await Awaitable.WaitForSecondsAsync(pointSampleRate);
         }
     }
     

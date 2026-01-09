@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
-using Random = UnityEngine.Random;
 
 public class Controls : MonoBehaviour
 {
@@ -10,16 +8,29 @@ public class Controls : MonoBehaviour
     [SerializeField] private float turnSpeed = 10f;
     [SerializeField] private float moveSpeed = 2f;
     
-    [SerializeField] private InputActionReference input;
+    [SerializeField] private InputActionReference left;
+    [SerializeField] private InputActionReference right;
+
+    private void OnEnable()
+    {
+        left.action.Enable();
+        right.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        left.action.Disable();
+        right.action.Disable();
+    }
 
     private void Update()
     {
-        if (Keyboard.current.aKey.isPressed)
+        if (left.action.IsPressed())
         {
             head.Rotate(Vector3.forward, Time.deltaTime * turnSpeed);
         }
 
-        if (Keyboard.current.dKey.isPressed)
+        if (right.action.IsPressed())
         {
             head.Rotate(-Vector3.forward, Time.deltaTime * turnSpeed);
         }
