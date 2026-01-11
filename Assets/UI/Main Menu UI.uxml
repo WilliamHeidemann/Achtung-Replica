@@ -1,141 +1,141 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainMenuUSS.uss?fileID=7433441132597879392&amp;guid=359f9110683984067ad525d87bbc6aa7&amp;type=3#MainMenuUSS"/>
-    <ui:VisualElement style="flex-grow: 1; padding-left: 20%; padding-right: 20%;">
-        <ui:VisualElement style="flex-grow: 1;"/>
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; padding-left: 20%; padding-right: 20%;">
+        <ui:VisualElement style="flex-grow: 1; max-height: 5%; min-height: 5%; height: 5%;"/>
         <ui:VisualElement style="flex-grow: 1;">
-            <ui:VisualElement class="white" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="HeaderElement" class="white" style="flex-grow: 1; flex-direction: row; max-height: 12%; min-height: 12%; height: 12%;">
                 <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
                     <ui:Label text="" style="-unity-text-align: upper-center;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%; opacity: 1;">
-                    <ui:Label text="name" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="NameHeader" style="flex-grow: 1; max-width: 55%; opacity: 1; justify-content: center;">
+                    <ui:Label text="name" name="NameHeaderLabel" style="-unity-text-align: middle-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 1%; padding-right: 4%; padding-bottom: 1%; padding-left: 4%; aspect-ratio: auto;"/>
                 </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="left" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="LeftKeyHeader" style="flex-grow: 1; max-width: 15%; min-width: 15%; -unity-text-align: middle-left; justify-content: center;">
+                    <ui:Label text="left " name="LeftKeyBindingheaderLabel" style="-unity-text-align: middle-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 5%; padding-right: 7%; padding-bottom: 5%; padding-left: 7%; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="right" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="RightKeyHeader" style="flex-grow: 1; max-width: 20%; min-width: 20%; -unity-text-align: middle-left; justify-content: center;">
+                    <ui:Label text="right" name="RightKeyBindingheaderLabel" style="-unity-text-align: middle-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 3%; padding-right: 7%; padding-bottom: 3%; padding-left: 7%;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="" class="red" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
-                    <ui:Label text="1" style="-unity-text-align: upper-center;"/>
+            <ui:VisualElement name="Player1Element" class="red" style="flex-grow: 1; flex-direction: row; max-height: 11%; min-height: 11%; height: 11%;">
+                <ui:VisualElement name="1Label" style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
+                    <ui:Label text="1" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%;">
-                    <ui:Label data-source="project://database/Assets/Scriptable%20Objects/Players/Player%201.asset?fileID=11400000&amp;guid=39ae91d1651e64417b3bf260befe7793&amp;type=2#Player 1" data-source-path="playerName" style="-unity-text-align: upper-center;">
+                <ui:VisualElement name="Player1Name" style="flex-grow: 1; max-width: 55%;">
+                    <ui:Label data-source="project://database/Assets/Scriptable%20Objects/Players/Player%201.asset?fileID=11400000&amp;guid=39ae91d1651e64417b3bf260befe7793&amp;type=2#Player 1" data-source-path="playerName" name="Player1NameLabel" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
                         <Bindings>
                             <ui:DataBinding property="text" data-source-path="playerName" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%201.asset?fileID=11400000&amp;guid=39ae91d1651e64417b3bf260befe7793&amp;type=2#Player 1" binding-mode="ToTarget"/>
                         </Bindings>
                     </ui:Label>
                 </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player1LeftKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player1LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement class="yellow" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
-                    <ui:Label text="2" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player1RightKey" style="flex-grow: 1; max-width: 15%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                    <ui:Label text="-" name="Player1RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="green" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
-                    <ui:Label text="3" style="-unity-text-align: upper-center;"/>
+            <ui:VisualElement name="Player2Element" class="yellow" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
+                <ui:VisualElement name="2Label" style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
+                    <ui:Label text="2" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player2Name" style="flex-grow: 1; max-width: 55%;">
+                    <ui:Label text="-" name="Player2NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player2LeftKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player2LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement class="pink" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
-                    <ui:Label text="4" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player2RightKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player2RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="cyan" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
-                    <ui:Label text="5" style="-unity-text-align: upper-center;"/>
+            <ui:VisualElement name="Player3Element" class="green" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
+                <ui:VisualElement name="3Label" style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
+                    <ui:Label text="3" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player3Name" style="flex-grow: 1; max-width: 55%;">
+                    <ui:Label text="-" name="Player4NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player3LeftKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player3LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement class="white" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
-                    <ui:Label text="6" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player3RightKey" style="flex-grow: 1; max-width: 15%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                    <ui:Label text="-" name="Player3RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="orange" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
-                    <ui:Label text="7" style="-unity-text-align: upper-center;"/>
+            <ui:VisualElement name="Player4Element" class="pink" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
+                <ui:VisualElement name="4Label" style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
+                    <ui:Label text="4" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player4Name" style="flex-grow: 1; max-width: 55%;">
+                    <ui:Label text="-" name="Player4NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player4LeftKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player4NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player4RightKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player4NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="blue" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
-                    <ui:Label text="8" style="-unity-text-align: upper-center;"/>
+            <ui:VisualElement name="Player5Element" class="cyan" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
+                <ui:VisualElement name="5Label" style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
+                    <ui:Label text="5" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 55%;">
-                    <ui:Label text="-&#10;" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player5Name" style="flex-grow: 1; max-width: 55%;">
+                    <ui:Label text="-" name="Player5NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement name="" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player5LeftKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player5LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" style="-unity-text-align: upper-center;"/>
+                <ui:VisualElement name="Player5RightKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player5RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Player6Element" class="white" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
+                <ui:VisualElement name="6Label" style="flex-grow: 1; flex-basis: 0; max-width: 15%; -unity-text-generator: advanced; -unity-text-auto-size: none;">
+                    <ui:Label text="6" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player6Name" style="flex-grow: 1; max-width: 55%;">
+                    <ui:Label text="-" name="Player6NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player6LeftKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player6LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player6RightKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player6RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Player7Element" class="orange" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
+                <ui:VisualElement name="7Label" style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
+                    <ui:Label text="7" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player7Name" style="flex-grow: 1; max-width: 55%;">
+                    <ui:Label text="-" name="Player7NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player7LeftKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player7LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player7RightKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player7RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Player8Element" class="blue" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
+                <ui:VisualElement name="8Label" style="flex-grow: 1; flex-basis: 0; max-width: 15%;">
+                    <ui:Label text="8" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player8Name" style="flex-grow: 1; max-width: 55%;">
+                    <ui:Label text="-&#10;" name="Player8NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player8LeftKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player8LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Player8RightKey" style="flex-grow: 1; max-width: 15%;">
+                    <ui:Label text="-" name="Player8RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;">
-            <ui:Button text="Select the players and assign keys&#10;Press SPACE to PLAY" focusable="false" name="Start" class="low-opacity" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(255, 250, 0); border-right-color: rgb(255, 250, 0); border-top-color: rgb(255, 250, 0); border-bottom-color: rgb(255, 250, 0); background-color: rgba(188, 188, 188, 0.26); color: rgb(255, 255, 255);"/>
+        <ui:VisualElement name="StartButtonElement" style="flex-grow: 1; max-width: none; max-height: 18%; min-height: 18%; height: 18%;">
+            <ui:Button text="Select the players and assign keys&#10;Press SPACE to PLAY" focusable="false" name="Start" enabled="true" class="low-opacity" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(255, 250, 0); border-right-color: rgb(255, 250, 0); border-top-color: rgb(255, 250, 0); border-bottom-color: rgb(255, 250, 0); background-color: rgba(188, 188, 188, 0.26); color: rgb(255, 255, 255); -unity-text-auto-size: best-fit 5px 100px; -unity-text-generator: advanced; white-space: pre;"/>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
