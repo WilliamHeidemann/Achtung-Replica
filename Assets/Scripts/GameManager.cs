@@ -1,7 +1,8 @@
 using System.Linq;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+[CreateAssetMenu(fileName = "GameManager", menuName = "ScriptableObjects/GameManager")]
+public class GameManager : ScriptableObject
 {
     [SerializeField] private Player[] players;
 
@@ -22,6 +23,11 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerDied(Player player)
     {
+        if (_game == null)
+        {
+            Debug.LogWarning("Game is not initialized.");
+            return;
+        }
         _game.PlayerDied(player);
         if (_game.HasRoundEnded)
         {

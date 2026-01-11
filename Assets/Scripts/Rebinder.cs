@@ -31,13 +31,24 @@ public class Rebinder : ScriptableObject
     
     public string GetBindingText(Key key, Player player)
     {
-        var action = key switch
+        InputAction action = key switch
         {
             Key.Left => player.left.action,
             Key.Right => player.right.action,
             _ => throw new ArgumentOutOfRangeException(nameof(key), key, null)
         };
         
+        return InputControlPath.ToHumanReadableString(
+            action.bindings[0].effectivePath,
+            InputControlPath.HumanReadableStringOptions.OmitDevice
+        );
+    }
+}
+
+public static class RebinderExtensions
+{
+    public static string GetBindingText(this InputAction action)
+    {
         return InputControlPath.ToHumanReadableString(
             action.bindings[0].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice

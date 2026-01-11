@@ -1,0 +1,45 @@
+:root {
+    font-size: 18px;
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/Montserrat/static/Montserrat-Black.ttf?fileID=12800000&guid=c783ca53e13d13744ae7660a86dc46e1&type=3#Montserrat-Black");
+    -unity-font-style: normal;
+}
+
+.low-opacity {
+    opacity: 0.5;
+}
+
+.low-opacity:hover {
+    opacity: 1;
+}
+
+.pink {
+    color: rgb(229, 0, 224);
+}
+
+.cyan {
+    color: rgb(0, 190, 229);
+}
+
+.red {
+    color: rgb(219, 0, 0);
+}
+
+.green {
+    color: rgb(0, 190, 30);
+}
+
+.white {
+    color: whitesmoke;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.blue {
+    color: royalblue;
+}
