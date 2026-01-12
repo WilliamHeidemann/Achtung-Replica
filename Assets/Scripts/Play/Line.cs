@@ -1,71 +1,60 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 
-public class Line : MonoBehaviour
+namespace Play
 {
-    [SerializeField] private Transform head;
-    [SerializeField] private LineRenderer lineRenderer;
-    [SerializeField] private EdgeCollider2D neckCollider;
-    [SerializeField] private EdgeCollider2D tailCollider;
-    [SerializeField] private int pointsInNeckTarget = 5;
-    [SerializeField] private float pointSampleRate = 0.5f;
-    
-    
-    private List<Vector2> _points;
-
-    private async void Start()
+    public class Line : MonoBehaviour
     {
-        lineRenderer.positionCount = 0;
-        neckCollider.Reset();
-        tailCollider.Reset();
-        _points = new List<Vector2>();
-        await AddPoint();
-    }
+        [SerializeField] private LineRenderer lineRenderer;
+        [SerializeField] private EdgeCollider2D neck;
+        [SerializeField] private EdgeCollider2D tail;
+        [SerializeField] private float timeBetweenPoints;
+        
+        [Header("Initialize On Spawn")]
+        public Transform head;
+        public Color color;
 
-    private void Update()
-    {
-        lineRenderer.SetPosition(lineRenderer.positionCount - 1, head.position);
-    }
+        public EdgeCollider2D Neck => neck;
+        private float _timeAtLastPoint;
+        private readonly List<Vector2> _points = new();
+        private const int PointsInNeckTarget = 5;
 
-    private async Task AddPoint()
-    {
-        while (true)
+        private void Start()
+        {
+            AddPoint();
+            lineRenderer.startColor = color;
+            lineRenderer.endColor = color;
+        }
+
+        private void Update()
+        {
+            if (Time.time > _timeAtLastPoint + timeBetweenPoints)
+            {
+                _timeAtLastPoint = Time.time + timeBetweenPoints;
+                AddPoint();
+            }   
+            
+            lineRenderer.SetPosition(lineRenderer.positionCount - 1, head.position);
+        }
+
+        private void AddPoint()
         {
             _points.Add(head.position);
             
             lineRenderer.positionCount = _points.Count;
             lineRenderer.SetPositions(_points.To3D());
             
-            var pointsInNeck = Mathf.Min(pointsInNeckTarget, _points.Count);
-            neckCollider.SetPoints(_points.GetRange(_points.Count - pointsInNeck, pointsInNeck));
-            tailCollider.SetPoints(_points.GetRange(0, _points.Count - pointsInNeck));
-            await Awaitable.WaitForSecondsAsync(pointSampleRate);
+            var pointsInNeck = Mathf.Min(PointsInNeckTarget, _points.Count);
+            neck.SetPoints(_points.GetRange(_points.Count - pointsInNeck, pointsInNeck));
+            tail.SetPoints(_points.GetRange(0, _points.Count - pointsInNeck));
         }
-    }
-    
-    private void OnDrawGizmos()
-    {
-        if (_points == null) return;
-        foreach (var point in _points)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawSphere(point, 0.1f);
-        }
-    }
-}
 
-public static class Extensions
-{
-    public static Vector3[] To3D(this List<Vector2> points)
-    {
-        var array = new Vector3[points.Count];
-        for (var i = 0; i < points.Count; i++)
+        public void End()
         {
-            var vector2 = points[i];
-            array[i] = new Vector3(vector2.x, vector2.y, 0);
+            neck.SetPoints(new List<Vector2>());
+            tail.SetPoints(_points);
+            enabled = false;
         }
-        return array;
     }
 }
