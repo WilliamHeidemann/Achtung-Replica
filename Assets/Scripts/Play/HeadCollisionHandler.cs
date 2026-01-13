@@ -11,8 +11,13 @@ public class HeadCollisionHandler : MonoBehaviour
     [SerializeField] private Collider2D headCollider;
 
     [SerializeField] private GameManager gameManager;
-    [SerializeField] private Player player;
+    private Player _player;
 
+    public void Initialize(Player player)
+    {
+        _player = player;
+    }
+    
     public void IgnoreCollider(EdgeCollider2D neck)
     {
         Physics2D.IgnoreCollision(headCollider, neck);
@@ -25,9 +30,10 @@ public class HeadCollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        print(other.collider.name);
         controls.enabled = false;
         this.enabled = false;
         rigidBody.simulated = false;
-        gameManager.OnPlayerDied(player);
+        gameManager.OnPlayerDied(_player);
     }
 }

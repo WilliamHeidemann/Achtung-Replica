@@ -17,6 +17,7 @@ namespace Play
 
         public EdgeCollider2D Neck => neck;
         private float _timeAtLastPoint;
+        private bool _shouldAddPoints = true;
         private readonly List<Vector2> _points = new();
         private const int PointsInNeckTarget = 5;
 
@@ -29,11 +30,16 @@ namespace Play
 
         private void Update()
         {
+            if (!_shouldAddPoints)
+            {
+                return;
+            }
+            
             if (Time.time > _timeAtLastPoint + timeBetweenPoints)
             {
                 _timeAtLastPoint = Time.time + timeBetweenPoints;
                 AddPoint();
-            }   
+            }
             
             lineRenderer.SetPosition(lineRenderer.positionCount - 1, head.position);
         }
@@ -55,6 +61,16 @@ namespace Play
             neck.SetPoints(new List<Vector2>());
             tail.SetPoints(_points);
             enabled = false;
+        }
+
+        public void Pause()
+        {
+            _shouldAddPoints = false;
+        }
+
+        public void Resume()
+        {
+            _shouldAddPoints = true;
         }
     }
 }

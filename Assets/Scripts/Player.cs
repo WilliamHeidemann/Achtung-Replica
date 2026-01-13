@@ -8,6 +8,10 @@ public class Player : ScriptableObject
     public bool isActive;
     public string leftKey = "-";
     public string rightKey = "-";
-    public InputActionReference left;
-    public InputActionReference right;
+    public Color color;
+    public InputActionAsset inputActionAsset;
+    public int id;
+    public InputAction LeftInputAction => inputActionAsset.FindActionMap("LeftRight").FindAction($"Left{id}");
+
+    public InputAction RightInputAction => inputActionAsset.FindActionMap("LeftRight").FindAction($"Right{id}");
 }

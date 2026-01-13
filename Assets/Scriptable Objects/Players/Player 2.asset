@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1f90406eee04cb09ff9377b0fc08ee8, type: 3}
-  m_Name: Player 1
+  m_Name: Player 2
   m_EditorClassIdentifier: Assembly-CSharp::Player
   playerName: '-'
   isActive: 1
   leftKey: '-'
   rightKey: '-'
-  color: {r: 0, g: 0.74509805, b: 0.8980392, a: 1}
+  color: {r: 1, g: 0.64705884, b: 0, a: 1}
   inputActionAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  id: 1
+  id: 2

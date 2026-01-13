@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public class Game
 {
-    public Dictionary<Player, int> ScoreBoard { get; private set; }
-    private readonly HashSet<Player> _deadPlayers;
+    private Dictionary<Player, int> ScoreBoard { get; }
+    private readonly HashSet<Player> _deadPlayers = new();
     public bool HasRoundEnded => _deadPlayers.Count == ScoreBoard.Count - 1;
     
     public Game(Player[] players)
@@ -30,9 +29,8 @@ public class Game
 
     private void AwardPoints()
     {
-        foreach (var player in ScoreBoard.Keys)
+        foreach (var player in ScoreBoard.Keys.Where(player => !_deadPlayers.Contains(player)).ToList())
         {
-            if (_deadPlayers.Contains(player)) continue;
             ScoreBoard[player]++;
         }
     }

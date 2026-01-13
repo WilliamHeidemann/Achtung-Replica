@@ -10,8 +10,8 @@ public class Rebinder : ScriptableObject
     {
         var action = key switch
         {
-            Key.Left => player.left.action,
-            Key.Right => player.right.action,
+            Key.Left => player.LeftInputAction,
+            Key.Right => player.RightInputAction,
             _ => throw new ArgumentOutOfRangeException(nameof(key), key, null)
         };
         
@@ -33,8 +33,8 @@ public class Rebinder : ScriptableObject
     {
         InputAction action = key switch
         {
-            Key.Left => player.left.action,
-            Key.Right => player.right.action,
+            Key.Left => player.LeftInputAction,
+            Key.Right => player.RightInputAction,
             _ => throw new ArgumentOutOfRangeException(nameof(key), key, null)
         };
         

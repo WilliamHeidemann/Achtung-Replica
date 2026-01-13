@@ -993,11 +993,20 @@
             ]
         },
         {
-            "name": "Player1",
+            "name": "LeftRight",
             "id": "bd2852f5-dfa2-4851-9433-23bad6858f38",
             "actions": [
                 {
-                    "name": "Left",
+                    "name": "Left1",
+                    "type": "Button",
+                    "id": "5e4f4b75-556d-458a-a4af-419dcdda299f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left2",
                     "type": "Button",
                     "id": "074a3ba0-55bd-45ed-8e53-e9e9123bf2ab",
                     "expectedControlType": "",
@@ -1006,9 +1015,126 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Right",
+                    "name": "Left3",
+                    "type": "Button",
+                    "id": "d8c0a1f7-dcf1-4bc7-bf67-6d672580fb1c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left4",
+                    "type": "Button",
+                    "id": "ddb35607-b45f-4a9b-98ef-333f01e1c5d9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left5",
+                    "type": "Button",
+                    "id": "6e439b56-d466-4829-a1eb-0a21f723e07a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left6",
+                    "type": "Button",
+                    "id": "31b98c89-3c26-4cd8-b7b8-88d7752a9926",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left7",
+                    "type": "Button",
+                    "id": "29120ef3-325c-4a8c-9a72-c4959a12bb56",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left8",
+                    "type": "Button",
+                    "id": "ee07effd-7a57-4165-b0a7-23a7339c3aad",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right1",
                     "type": "Button",
                     "id": "9709baa0-1284-4c10-82cc-27dce3e3744f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right2",
+                    "type": "Button",
+                    "id": "61a24677-2d05-4ce6-a405-38c319656ad9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right3",
+                    "type": "Button",
+                    "id": "80cf7f3d-60a1-4629-bb67-f8259d0967b2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right4",
+                    "type": "Button",
+                    "id": "8094c05a-56fb-4422-8841-1e4bdc54b340",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right5",
+                    "type": "Button",
+                    "id": "e8591ad0-0061-4ba0-9dad-bb7e1583ecf2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right6",
+                    "type": "Button",
+                    "id": "f5b1e4e1-36c4-4cde-8a38-1fe39994205c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right7",
+                    "type": "Button",
+                    "id": "9ec33137-fa17-45a1-89a4-711d6b25bb4b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right8",
+                    "type": "Button",
+                    "id": "029ff77d-f209-4caa-ae80-3fc4f83a2ef3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1019,11 +1145,88 @@
                 {
                     "name": "",
                     "id": "5ce0b775-86ce-4a61-ba4c-4aedebf51b1b",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Left2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8b7d260-09a5-432c-b691-cb92e5aac043",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Left",
+                    "action": "Left3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "033e70d1-f036-4240-b4d5-e6e6668a711b",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Left4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7e2473d-52dd-4228-a140-0af2540142de",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Left5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e56865d9-78ff-4ed7-a059-ea9296eb2128",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Left6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e415e22e-d84d-4d69-b12d-328696e0089c",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Left7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4f49156-6247-4ebd-b2ce-484430494ccd",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Left8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "219415ad-0436-4da2-a83a-f5ec4c997b0d",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Left1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1034,55 +1237,84 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Right",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Player2",
-            "id": "515bd992-13e3-4187-99bb-de290137e3f8",
-            "actions": [
-                {
-                    "name": "Left",
-                    "type": "Button",
-                    "id": "1dc2662d-1a79-414f-b4cc-9283b620c710",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Right",
-                    "type": "Button",
-                    "id": "3b21ba5c-9489-4e39-b410-eab3da379baa",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "aa8681c1-10ca-404e-a36e-6ed238d89a0c",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Left",
+                    "action": "Right1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "926149a2-7062-4d53-98d0-4e9bacf8314e",
+                    "id": "94161016-3eb2-43b0-b858-1072e48c8029",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Right",
+                    "action": "Right2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ea85fdc-6319-47a6-95a9-6b7ef008081d",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Right3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "286f1532-b726-4d02-aa58-749f58eb14a2",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Right4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "efafd905-4178-4591-93d6-aab10f153235",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Right5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de9e3a20-58b8-4a97-a3b9-88bab2cc004a",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Right6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ae36f9b-e8e9-4440-b614-f519cd563a2a",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Right7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f3aa8af-fe22-493a-a7a2-a315fab8c4e9",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Right8",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

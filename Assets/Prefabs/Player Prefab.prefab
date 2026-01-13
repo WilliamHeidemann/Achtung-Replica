@@ -48,8 +48,24 @@ MonoBehaviour:
   head: {fileID: 3169037306361499156}
   turnSpeed: 75
   moveSpeed: 1
-  left: {fileID: 0}
-  right: {fileID: 0}
+  left:
+    m_Name: Left
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 28dd2e80-127c-410d-8c29-79423aaabdb3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  right:
+    m_Name: Right
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fa1e5b1e-d09a-4e50-981c-3d29ed9cd1cc
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &3264941202724342418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +132,6 @@ MonoBehaviour:
   lineSpawner: {fileID: 3264941202724342418}
   headCollider: {fileID: 9083888742325590720}
   gameManager: {fileID: 11400000, guid: 6f3ecb60c087a4f9a8b9c4fa488b420e, type: 2}
-  player: {fileID: 11400000, guid: 39ae91d1651e64417b3bf260befe7793, type: 2}
 --- !u!212 &6895836913206741295
 SpriteRenderer:
   serializedVersion: 2
@@ -248,6 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6262705208610466686}
+  - component: {fileID: 1111401489501724171}
   m_Layer: 0
   m_Name: Player Prefab
   m_TagString: Untagged
@@ -272,3 +288,18 @@ Transform:
   - {fileID: 3169037306361499156}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1111401489501724171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559409215891141989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ed53aee94d42f4b2a58930b2d72967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Play.PlayerBrain
+  lineSpawner: {fileID: 3264941202724342418}
+  headCollisionHandler: {fileID: 8066849061002793486}
+  controls: {fileID: 7482558256079781716}
