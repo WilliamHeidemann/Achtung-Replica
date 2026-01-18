@@ -1,0 +1,89 @@
+/* ===============================
+   ROOT DROPDOWN
+   =============================== */
+
+DropdownField {
+    min-height: 44px;
+    padding: 6px 10px;
+
+    background-color: rgba(110, 110, 110, 0);          /* warm yellow */
+    border-color: #3b2f1c;               /* dark outline */
+    border-width: 0;
+    border-radius: 14px;
+
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: #3b2f1c;
+
+    box-shadow: 0 4px 0 0 #3b2f1c;        /* fake cartoon shadow */
+}
+
+/* Pressed look */
+DropdownField:active {
+    top: 3px;
+    box-shadow: 0 1px 0 0 #3b2f1c;
+}
+
+/* Hover highlight */
+DropdownField:hover {
+    background-color: #ffe699;
+}
+
+/* ===============================
+   LABEL
+   =============================== */
+
+DropdownField > .unity-base-field__label {
+    min-width: 120px;
+    margin-right: 8px;
+
+    color: #3b2f1c;
+    font-size: 16px;
+}
+
+/* ===============================
+   INPUT AREA
+   =============================== */
+
+DropdownField > .unity-base-field__input {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+
+/* Selected value text */
+DropdownField .unity-text-element {
+    font-size: 18px;
+    color: #3b2f1c;
+}
+
+/* ===============================
+   DROPDOWN MENU
+   =============================== */
+
+.unity-dropdown {
+    background-color: #ffffff;
+    border: 3px solid #3b2f1c;
+    border-radius: 14px;
+    padding: 6px;
+}
+
+/* Dropdown items */
+.unity-dropdown__item {
+    padding: 8px 10px;
+    border-radius: 8px;
+
+    font-size: 16px;
+    color: #3b2f1c;
+}
+
+/* Hovered item */
+.unity-dropdown__item:hover {
+    background-color: #ffd966;
+}
+
+/* Selected item */
+.unity-dropdown__item--selected {
+    background-color: #ffb703;
+    color: #3b2f1c;
+}

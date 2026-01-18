@@ -24,7 +24,7 @@ public class Controls : MonoBehaviour, IPausable
         
         var x = Random.Range(-3, 3);
         var y = Random.Range(-3, 3);
-        var angle = Random.Range(0, 360);
+        var angle = Random.Range(0f, 360f);
         head.Rotate(Vector3.forward, angle);
         head.position = new Vector3(x, y);
     }

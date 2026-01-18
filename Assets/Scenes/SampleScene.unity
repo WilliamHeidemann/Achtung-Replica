@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &157171348
 Transform:
   m_ObjectHideFlags: 0
@@ -189,14 +189,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   uiDocument: {fileID: 157171349}
   gameManager: {fileID: 11400000, guid: 6f3ecb60c087a4f9a8b9c4fa488b420e, type: 2}
+  lobby: {fileID: 11400000, guid: 924aaf73af6d54e95a179695d435472f, type: 2}
   player1: {fileID: 11400000, guid: 39ae91d1651e64417b3bf260befe7793, type: 2}
-  player2: {fileID: 0}
-  player3: {fileID: 0}
-  player4: {fileID: 0}
-  player5: {fileID: 0}
-  player6: {fileID: 0}
-  player7: {fileID: 0}
-  player8: {fileID: 0}
+  player2: {fileID: 11400000, guid: 27b7f330299e1431f9ea576faa9dc9cd, type: 2}
+  player3: {fileID: 11400000, guid: 14b8a2454ffc24c418c5c0d6f97539fd, type: 2}
+  player4: {fileID: 11400000, guid: c54f9f8dcdd3c428c838b40d1a8b3ccf, type: 2}
+  player5: {fileID: 11400000, guid: 04271edb5ab3540c0aade58a624bbd82, type: 2}
+  player6: {fileID: 11400000, guid: d3888812c38c34763854c98fbe6f5caa, type: 2}
 --- !u!1 &164616709
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &164616710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,7 +352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &243382109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,7 +783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1787622111
 Transform:
   m_ObjectHideFlags: 0

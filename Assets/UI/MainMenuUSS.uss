@@ -29,7 +29,7 @@
 }
 
 .white {
-    color: whitesmoke;
+    color: #9a9a9a;
 }
 
 .yellow {
