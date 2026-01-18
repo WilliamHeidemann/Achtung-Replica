@@ -6,33 +6,36 @@ using UtilityToolkit.Runtime;
 public class Lobby : ScriptableObject
 {
     [SerializeField] private Player[] players;
+    [SerializeField] private Rebinder rebinder;
     
     private Option<Player> _selectedPlayer;
-    private State _state = State.None;
 
-    public enum State
+    public void ListenForLeftKey()
     {
-        None,
-        Name,
-        LeftKey,
-        RightKey
+        if (!_selectedPlayer.IsSome(out var player))
+        {
+            return;
+        }
+        
+        rebinder.Rebind(Rebinder.Key.Left, player);
     }
 
-    public void AdvanceState()
+    public void ListenForRightKey()
     {
-        var nextState = _state switch
+        if (!_selectedPlayer.IsSome(out var player))
         {
-            State.None => State.Name,
-            State.Name => State.LeftKey,
-            State.LeftKey => State.RightKey,
-            State.RightKey => State.None,
-            _ => throw new ArgumentOutOfRangeException()
-        };
+            return;
+        }
         
-        
+        rebinder.Rebind(Rebinder.Key.Right, player);
+    }
+
+    public void DeselectPlayer()
+    {
+        _selectedPlayer = Option<Player>.None;
     }
     
-    public void OnSelectPlayer(int index)
+    public void OnNameSet(int index)
     {
         if (index < 0 || index >= players.Length)
         {
@@ -42,7 +45,7 @@ public class Lobby : ScriptableObject
         
         _selectedPlayer = Option<Player>.Some(players[index]);
 
-        AdvanceState();
+        ListenForLeftKey();
     }
 
     public void SetName(int index, string playerName)
@@ -54,5 +57,7 @@ public class Lobby : ScriptableObject
         }
 
         players[index].playerName = playerName;
+        
+        OnNameSet(index);
     }
 }

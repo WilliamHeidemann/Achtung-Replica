@@ -2,9 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[CreateAssetMenu(fileName = "Rebinder", menuName = "ScriptableObjects/Rebinder", order = 0)]
 public class Rebinder : ScriptableObject
 {
     public enum Key { Left, Right }
+
+    [SerializeField] private Lobby lobby;
     
     public void Rebind(Key key, Player player)
     {
@@ -24,9 +27,20 @@ public class Rebinder : ScriptableObject
             {
                 action.Enable();
                 operation.Dispose();
-                Debug.Log("Left bound to: " + GetBindingText(key, player));
+                Debug.Log($"{key} key bound to: {GetBindingText(key, player)}");
+                if (key == Key.Left)
+                {
+                    player.leftKey = GetBindingText(key, player);
+                    lobby.ListenForRightKey();
+                }
+                else
+                {
+                    player.rightKey = GetBindingText(key, player);
+                    lobby.DeselectPlayer();
+                }
             })
             .Start();
+        Debug.Log($"Listening to {player.playerName} for {key} key.");
     }
     
     public string GetBindingText(Key key, Player player)
@@ -38,17 +52,6 @@ public class Rebinder : ScriptableObject
             _ => throw new ArgumentOutOfRangeException(nameof(key), key, null)
         };
         
-        return InputControlPath.ToHumanReadableString(
-            action.bindings[0].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice
-        );
-    }
-}
-
-public static class RebinderExtensions
-{
-    public static string GetBindingText(this InputAction action)
-    {
         return InputControlPath.ToHumanReadableString(
             action.bindings[0].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice

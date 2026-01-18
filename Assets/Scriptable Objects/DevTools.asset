@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bf7f0daba624723915b79cd91d7e878, type: 3}
-  m_Name: Lobby
-  m_EditorClassIdentifier: Assembly-CSharp::Lobby
+  m_Script: {fileID: 11500000, guid: f39ad044bc874933aa2158bc49efaa02, type: 3}
+  m_Name: DevTools
+  m_EditorClassIdentifier: Assembly-CSharp::DevTools
   players:
   - {fileID: 11400000, guid: 39ae91d1651e64417b3bf260befe7793, type: 2}
   - {fileID: 11400000, guid: 27b7f330299e1431f9ea576faa9dc9cd, type: 2}
@@ -19,4 +19,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c54f9f8dcdd3c428c838b40d1a8b3ccf, type: 2}
   - {fileID: 11400000, guid: 04271edb5ab3540c0aade58a624bbd82, type: 2}
   - {fileID: 11400000, guid: d3888812c38c34763854c98fbe6f5caa, type: 2}
-  rebinder: {fileID: 11400000, guid: 3e338df091b8946aeba201488688ea3b, type: 2}

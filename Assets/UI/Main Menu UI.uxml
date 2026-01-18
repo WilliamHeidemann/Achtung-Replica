@@ -25,10 +25,18 @@
                     <ui:DropdownField label="" class="name-dropdown" style="min-height: 100%; max-width: 50%; min-width: 50%;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player1LeftKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player1LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player1LeftKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%201.asset?fileID=11400000&amp;guid=39ae91d1651e64417b3bf260befe7793&amp;type=2#Player 1" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="leftKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player1RightKey" style="flex-grow: 1; max-width: 15%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
-                    <ui:Label text="-" name="Player1RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player1RightKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%201.asset?fileID=11400000&amp;guid=39ae91d1651e64417b3bf260befe7793&amp;type=2#Player 1" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="rightKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Player2Element" class="green" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
@@ -39,10 +47,18 @@
                     <ui:DropdownField label="" class="name-dropdown" style="min-height: 100%; max-width: 50%; min-width: 50%;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player2LeftKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player2LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player2LeftKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%202.asset?fileID=11400000&amp;guid=27b7f330299e1431f9ea576faa9dc9cd&amp;type=2#Player 2" style="-unity-text-align: upper-center; -unity-text-auto-size: best-fit 10px 100px; -unity-text-generator: advanced; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="leftKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player2RightKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player2RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player2RightKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%202.asset?fileID=11400000&amp;guid=27b7f330299e1431f9ea576faa9dc9cd&amp;type=2#Player 2" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="rightKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Player3Element" class="pink" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
@@ -53,10 +69,18 @@
                     <ui:DropdownField label="" class="name-dropdown" style="min-height: 100%; max-width: 50%; min-width: 50%;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player3LeftKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player3LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player3LeftKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%203.asset?fileID=11400000&amp;guid=14b8a2454ffc24c418c5c0d6f97539fd&amp;type=2#Player 3" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="leftKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player3RightKey" style="flex-grow: 1; max-width: 15%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
-                    <ui:Label text="-" name="Player3RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player3RightKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%203.asset?fileID=11400000&amp;guid=14b8a2454ffc24c418c5c0d6f97539fd&amp;type=2#Player 3" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="rightKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Player4Element" class="pink cyan" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
@@ -67,10 +91,18 @@
                     <ui:DropdownField label="" class="name-dropdown" style="min-height: 100%; max-width: 50%; min-width: 50%;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player4LeftKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player4NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player4NameLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%204.asset?fileID=11400000&amp;guid=c54f9f8dcdd3c428c838b40d1a8b3ccf&amp;type=2#Player 4" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="leftKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player4RightKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player4NameLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player4NameLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%204.asset?fileID=11400000&amp;guid=c54f9f8dcdd3c428c838b40d1a8b3ccf&amp;type=2#Player 4" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="rightKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Player5Element" class="orange" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
@@ -81,10 +113,18 @@
                     <ui:DropdownField label="" class="name-dropdown" style="min-height: 100%; max-width: 50%; min-width: 50%;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player5LeftKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player5LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player5LeftKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%205.asset?fileID=11400000&amp;guid=04271edb5ab3540c0aade58a624bbd82&amp;type=2#Player 5" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="leftKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player5RightKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player5RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player5RightKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%205.asset?fileID=11400000&amp;guid=04271edb5ab3540c0aade58a624bbd82&amp;type=2#Player 5" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="rightKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Player6Element" class="white" style="flex-grow: 1; flex-direction: row; height: 11%; min-height: 11%; max-height: 11%;">
@@ -95,10 +135,18 @@
                     <ui:DropdownField label="" class="name-dropdown" style="min-height: 100%; max-width: 50%; min-width: 50%;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player6LeftKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player6LeftKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player6LeftKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%206.asset?fileID=11400000&amp;guid=d3888812c38c34763854c98fbe6f5caa&amp;type=2#Player 6" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="leftKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
                 <ui:VisualElement name="Player6RightKey" style="flex-grow: 1; max-width: 15%;">
-                    <ui:Label text="-" name="Player6RightKeyLabel" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;"/>
+                    <ui:Label text="-" name="Player6RightKeyLabel" data-source="project://database/Assets/Scriptable%20Objects/Players/Player%206.asset?fileID=11400000&amp;guid=d3888812c38c34763854c98fbe6f5caa&amp;type=2#Player 6" style="-unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="rightKey" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:Label>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
