@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   playerName: '-'
   isActive: 1
-  leftKey: '-'
-  rightKey: '-'
-  color: {r: 1, g: 0.64705884, b: 0, a: 1}
+  leftKey: X
+  rightKey: D
+  color: {r: 0, g: 0.74509805, b: 0.11764706, a: 1}
   inputActionAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   id: 2

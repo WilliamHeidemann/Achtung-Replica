@@ -10,6 +10,9 @@ public class Lobby : ScriptableObject
     
     private Option<Player> _selectedPlayer;
 
+    public event Action<Player, Rebinder.Key> OnListenForKey;
+    public event Action<Player, Rebinder.Key> OnStopListenForKey;
+
     public void ListenForLeftKey()
     {
         if (!_selectedPlayer.IsSome(out var player))
@@ -18,6 +21,7 @@ public class Lobby : ScriptableObject
         }
         
         rebinder.Rebind(Rebinder.Key.Left, player);
+        OnListenForKey?.Invoke(player, Rebinder.Key.Left);
     }
 
     public void ListenForRightKey()
@@ -28,22 +32,26 @@ public class Lobby : ScriptableObject
         }
         
         rebinder.Rebind(Rebinder.Key.Right, player);
+        OnStopListenForKey?.Invoke(player, Rebinder.Key.Left);
+        OnListenForKey?.Invoke(player, Rebinder.Key.Right);
     }
 
     public void DeselectPlayer()
     {
-        _selectedPlayer = Option<Player>.None;
-    }
-    
-    public void OnNameSet(int index)
-    {
-        if (index < 0 || index >= players.Length)
+        if (!_selectedPlayer.IsSome(out var player))
         {
-            Debug.LogError($"Player index {index} is out of range");
             return;
         }
         
-        _selectedPlayer = Option<Player>.Some(players[index]);
+        OnStopListenForKey?.Invoke(player, Rebinder.Key.Left);
+        OnStopListenForKey?.Invoke(player, Rebinder.Key.Right);
+        
+        _selectedPlayer = Option<Player>.None;
+    }
+
+    private void OnNameSet(Player player)
+    {
+        _selectedPlayer = Option<Player>.Some(player);
 
         ListenForLeftKey();
     }
@@ -56,8 +64,17 @@ public class Lobby : ScriptableObject
             return;
         }
 
-        players[index].playerName = playerName;
-        
-        OnNameSet(index);
+        var player = players[index];
+        player.playerName = playerName;
+
+        if (playerName == "-")
+        {
+            player.leftKey = "-";
+            player.rightKey = "-";
+        }
+        else
+        {
+            OnNameSet(player);
+        }
     }
 }

@@ -52,6 +52,7 @@ MonoBehaviour:
   tail: {fileID: 8527855357820764257}
   timeBetweenPoints: 0.05
   head: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!120 &1614894857504159228
 LineRenderer:
   serializedVersion: 3
@@ -195,7 +196,7 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.03
   m_Points: []
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -236,7 +237,7 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.03
   m_Points: []
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}

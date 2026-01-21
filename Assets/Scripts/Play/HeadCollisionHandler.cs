@@ -30,7 +30,6 @@ public class HeadCollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        print(other.collider.name);
         controls.enabled = false;
         this.enabled = false;
         rigidBody.simulated = false;

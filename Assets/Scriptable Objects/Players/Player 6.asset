@@ -16,6 +16,6 @@ MonoBehaviour:
   isActive: 1
   leftKey: '-'
   rightKey: '-'
-  color: {r: 1, g: 0.64705884, b: 0, a: 1}
+  color: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
   inputActionAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   id: 6

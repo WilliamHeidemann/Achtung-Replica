@@ -27,7 +27,6 @@ public class Rebinder : ScriptableObject
             {
                 action.Enable();
                 operation.Dispose();
-                Debug.Log($"{key} key bound to: {GetBindingText(key, player)}");
                 if (key == Key.Left)
                 {
                     player.leftKey = GetBindingText(key, player);
@@ -40,7 +39,6 @@ public class Rebinder : ScriptableObject
                 }
             })
             .Start();
-        Debug.Log($"Listening to {player.playerName} for {key} key.");
     }
     
     public string GetBindingText(Key key, Player player)

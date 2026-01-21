@@ -29,7 +29,7 @@
 }
 
 .white {
-    color: #9a9a9a;
+    color: rgb(154, 154, 154);
 }
 
 .yellow {
@@ -43,3 +43,5 @@
 .blue {
     color: royalblue;
 }
+
+

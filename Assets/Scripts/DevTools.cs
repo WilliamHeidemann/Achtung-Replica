@@ -6,7 +6,7 @@ public class DevTools : ScriptableObject
 {
     [SerializeField] private Player[] players;
 
-    [Button]
+    [Button("Reset Player Values")]
     public void ResetPlayers()
     {
         foreach (var player in players)
@@ -15,5 +15,11 @@ public class DevTools : ScriptableObject
             player.leftKey = "-";
             player.rightKey = "-";
         }
+    }
+
+    [Button("Test")]
+    public void Test()
+    {
+        Debug.Log("Test");
     }
 }

@@ -5,10 +5,11 @@ using UnityEngine.InputSystem;
 public class Player : ScriptableObject
 {
     public string playerName;
-    public bool isActive;
+    public bool isActive => playerName != "-";
     public string leftKey = "-";
     public string rightKey = "-";
     public Color color;
+    public Vector2 startPosition;
     public InputActionAsset inputActionAsset;
     public int id;
     public InputAction LeftInputAction => inputActionAsset.FindActionMap("LeftRight").FindAction($"Left{id}");
