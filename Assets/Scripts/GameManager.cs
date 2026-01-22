@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Play;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 [CreateAssetMenu(fileName = "GameManager", menuName = "ScriptableObjects/GameManager")]
 public class GameManager : ScriptableObject
@@ -10,6 +12,7 @@ public class GameManager : ScriptableObject
     [SerializeField] private Player[] players;
     [SerializeField] private PlayerBrain brainPrefab;
     [SerializeField] private InputActionAsset asset;
+    public event Action OnGameStarted;
 
     private Game _game;
     private bool _isPaused;
@@ -27,6 +30,7 @@ public class GameManager : ScriptableObject
         _game = new Game(activePlayers);
         _game.StartRound();
         SpawnPlayers();
+        OnGameStarted?.Invoke();
     }
 
     private void SpawnPlayers()
@@ -54,7 +58,6 @@ public class GameManager : ScriptableObject
         
         var positions = new List<Vector2>();
 
-        // const float width = 1.75f;
         const float width = 1f;
         
         var a1 = -3f;
@@ -139,5 +142,10 @@ public class GameManager : ScriptableObject
 
     public void ReturnToMainMenu()
     {
+    }
+
+    public void SubscribeToScoreboardUpdated(Action<Dictionary<Player, int>> onScoreboardUpdated)
+    {
+        _game.OnScoreboardUpdated += onScoreboardUpdated;
     }
 }

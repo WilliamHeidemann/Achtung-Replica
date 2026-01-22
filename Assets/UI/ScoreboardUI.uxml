@@ -14,8 +14,33 @@
                     <ui:Label text="2 points diff" name="Label" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Montserrat/static/Montserrat-Bold.ttf?fileID=12800000&amp;guid=fe11a53a77fa91a4ca9903c04be8bf5a&amp;type=3#Montserrat-Bold&quot;); -unity-font-style: normal; -unity-text-align: upper-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 100px; color: rgb(255, 255, 255); max-height: 50%; min-height: auto; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; min-width: 100%; height: auto; flex-shrink: 0; flex-grow: 1; background-color: rgba(255, 153, 153, 0); width: 100%; max-width: 100%;"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="Scoreboard" style="flex-grow: 1; height: 12.5%; min-height: 12.5%; max-height: 12.5%; width: 100%; min-width: 100%; max-width: 100%;"/>
-            <ui:VisualElement name="Empty" style="flex-grow: 1; height: 25%; min-height: 25%; max-height: 25%; width: 100%; min-width: 100%; max-width: 100%;"/>
+            <ui:VisualElement name="Scoreboard" style="flex-grow: 1; height: 27.5%; min-height: 27.5%; max-height: 27.5%; width: 100%; min-width: 100%; max-width: 100%; align-items: stretch; flex-wrap: nowrap; padding-top: 0; padding-right: 20%; padding-bottom: 0; padding-left: 20%; color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Montserrat/static/Montserrat-SemiBold.ttf?fileID=12800000&amp;guid=24bb6086e473b544b99b9d3b2b924db2&amp;type=3#Montserrat-SemiBold&quot;); font-size: 32px;">
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; flex-shrink: 0; padding-bottom: 5px;">
+                    <ui:Label text="ML6" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-wrap: nowrap;"/>
+                    <ui:Label text="12" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; flex-shrink: 0; padding-bottom: 5px;">
+                    <ui:Label text="ML6" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-wrap: nowrap;"/>
+                    <ui:Label text="12" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; flex-shrink: 0; padding-bottom: 5px;">
+                    <ui:Label text="ML6" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-wrap: nowrap;"/>
+                    <ui:Label text="12" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; flex-shrink: 0; padding-bottom: 5px;">
+                    <ui:Label text="ML6" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-wrap: nowrap;"/>
+                    <ui:Label text="12" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; flex-shrink: 0; padding-bottom: 5px;">
+                    <ui:Label text="ML6" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-wrap: nowrap;"/>
+                    <ui:Label text="12" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: nowrap; flex-shrink: 0; padding-bottom: 5px;">
+                    <ui:Label text="ML6" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-wrap: nowrap;"/>
+                    <ui:Label text="12" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Empty" style="flex-grow: 1; height: 15%; min-height: 15%; max-height: 15%; width: 100%; min-width: 100%; max-width: 100%;"/>
             <ui:VisualElement name="Settings" style="flex-grow: 1; max-height: 12.5%; min-height: 12.5%; flex-direction: column; height: 12.5%; min-width: 100%; justify-content: center;">
                 <ui:VisualElement style="flex-grow: 1; height: 50%; min-height: 50%; max-height: 50%; width: 100%; min-width: 100%; max-width: 100%;">
                     <ui:Label text="Music:  off" binding-path="" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf?fileID=12800000&amp;guid=82fee4e6f7e79c44ab130c5158af381c&amp;type=3#Ldfcomicsans-jj7l&quot;); color: rgb(255, 235, 4); -unity-text-auto-size: best-fit 10px 100px; -unity-text-align: upper-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-text-generator: advanced; max-width: 100%; min-width: 100%; width: 100%; padding-top: 1px; padding-right: 20%; padding-bottom: 1px; padding-left: 15%; -unity-font-style: italic;"/>

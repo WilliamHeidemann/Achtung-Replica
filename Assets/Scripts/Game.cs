@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,6 +7,8 @@ public class Game
     private Dictionary<Player, int> ScoreBoard { get; }
     private readonly HashSet<Player> _deadPlayers = new();
     public bool HasRoundEnded => _deadPlayers.Count == ScoreBoard.Count - 1;
+    
+    public event Action<Dictionary<Player, int>> OnScoreboardUpdated;
     
     public Game(Player[] players)
     {
@@ -33,5 +36,7 @@ public class Game
         {
             ScoreBoard[player]++;
         }
+        
+        OnScoreboardUpdated?.Invoke(ScoreBoard);
     }
 }
